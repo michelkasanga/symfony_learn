@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "thenouillet.symfony-vscode",
+        "ntb.theme-symfony-dark",
+        "nadim-vscode.symfony-super-console",
+        "nadim-vscode.symfony-code-snippets",
+        "duboiss.sf-pack",
+        "walkme.symfony-extension-pack",
+        "whyw0rry.symfony-pack",
+        "mikestead.dotenv",
+        "syler.sass-indented",
+        "mblode.twig-language-2",
+        "redhat.vscode-yaml",
+        "nadim-vscode.symfony-extension-pack"
+    ]
+}

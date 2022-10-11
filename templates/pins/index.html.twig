@@ -4,18 +4,23 @@
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .example-wrapper { background: black; padding: 2px 6px; color:#ffff; margin: 1em auto; max-width: 100%; width: 95%; font: 18px/1.5 sans-serif; }
 </style>
 
 <div class="example-wrapper">
     <h1>Get pins </h1>
     <a href="{{ path('app_create')}}"> create</a><br><br>
 
-    
-   {% for pin in pins %}
-    {{ pin.title }}<br>
+    {% for pin in pins %}
+  <a href="pin/{{pin.id}}">  {{ pin.title }}</a><br>
      {{ pin.content }}<br><br>
+      {% else %}
+  <p> Sorry! No pin yet</p>
   {% endfor %} 
+ 
+
+    
+   
 </div>
 {% endblock %}
+

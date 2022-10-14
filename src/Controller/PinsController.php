@@ -30,9 +30,9 @@ class PinsController extends AbstractController
     return $this->render('pins/index.html.twig', compact('pins'));
     }
 
-    #[Route('pin/{id}',methods:['GET'])]
-    public function  show(int $id){
-        $pin = $this->pinRepos->find($id);
+    #[Route('pin/{id}',name:'pin_found',methods:['GET'])]
+    public function  show(Pins $pin)
+    {
         return $this->render('pins/show.html.twig', compact('pin'));
     }
 
@@ -49,7 +49,7 @@ class PinsController extends AbstractController
     $form->handleRequest($request);
     if ($form->isSubmitted() && $form->isValid()) {
         $this->pinRepos->save($this->entityPin, true);
-        return $this->redirectToRoute('app_pins');
+        return $this->redirectToRoute('pin_found',['id'=>$this->entityPin->getId()]);
     }
     return $this->render('pins/create.html.twig', compact('get'));
     }

@@ -12,7 +12,7 @@
     <a href="{{ path('app_create')}}"> create</a><br><br>
 
     {% for pin in pins %}
-  <a href="pin/{{pin.id}}">  {{ pin.title }}</a><br>
+  <a href="{{url('pin_found', {'id':pin.id})}}">  {{ pin.title }}</a><br>
      {{ pin.content }}<br><br>
       {% else %}
   <p> Sorry! No pin yet</p>
